@@ -1,148 +1,115 @@
 <script lang="ts">
 	import Hero from "$lib/components/Hero.svelte";
 	import FeatureSection from "$lib/components/FeatureSection.svelte";
+	import HowItWorks from "$lib/components/HowItWorks.svelte";
+	import Testimonials from "$lib/components/Testimonials.svelte";
+	import Pricing from "$lib/components/Pricing.svelte";
 	import Footer from "$lib/components/Footer.svelte";
 	
-	import SplitInbox from "$lib/components/visuals/SplitInbox.svelte";
-	import TextEditorSimple from "$lib/components/visuals/TextEditorSimple.svelte";
-	import TextEditorToolbar from "$lib/components/visuals/TextEditorToolbar.svelte";
-	import Speed from "$lib/components/visuals/Speed.svelte";
-	import Design from "$lib/components/visuals/Design.svelte";
-	import Keyboard from "$lib/components/visuals/Keyboard.svelte";
-	import Security from "$lib/components/visuals/Security.svelte";
+	import Leaderboard from "$lib/components/visuals/Leaderboard.svelte";
+	import XPTracking from "$lib/components/visuals/XPTracking.svelte";
+	import RewardsShop from "$lib/components/visuals/RewardsShop.svelte";
+	import Challenges from "$lib/components/visuals/Challenges.svelte";
+	import Analytics from "$lib/components/visuals/Analytics.svelte";
+	import Commands from "$lib/components/visuals/Commands.svelte";
 </script>
 
-<main class="bg-tatem-bg min-h-screen text-white selection:bg-white/20">
+<main class="bg-novaxp-bg min-h-screen text-white selection:bg-white/20">
 	<Hero />
 	
 	<div class="mt-20 md:mt-40">
-        <!-- Dark Mode Interface Section Divider -->
-        <div class="px-4 max-w-6xl mx-auto mb-32 relative">
-             <div class="aspect-video bg-[#0A0A0A] rounded-lg border border-white/5 flex flex-col justify-end p-6 md:p-10 relative overflow-hidden">
-                 <!-- Simple representation of the dark UI screenshot from the middle of the page -->
-                 <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50"></div>
-                 <div class="relative z-10 flex justify-between items-end w-full">
-                     <div class="flex items-center gap-2 text-white font-semibold">
-                         <div class="w-4 h-4 bg-white rounded-full"></div> tatem
-                     </div>
+        <!-- Stats Section -->
+        <div class="px-4 max-w-6xl mx-auto mb-32">
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                 <div class="bg-[#0A0A0A] rounded-xl border border-white/5 p-8">
+                     <div class="text-4xl md:text-5xl font-bold text-white mb-2">2,400+</div>
+                     <div class="text-gray-400">Active Discord Servers</div>
+                 </div>
+                 <div class="bg-[#0A0A0A] rounded-xl border border-white/5 p-8">
+                     <div class="text-4xl md:text-5xl font-bold text-white mb-2">180K+</div>
+                     <div class="text-gray-400">Members Tracked</div>
+                 </div>
+                 <div class="bg-[#0A0A0A] rounded-xl border border-white/5 p-8">
+                     <div class="text-4xl md:text-5xl font-bold text-white mb-2">12M+</div>
+                     <div class="text-gray-400">XP Points Distributed</div>
                  </div>
              </div>
-             <div class="text-center mt-10 text-gray-500 text-sm flex flex-col items-center gap-2 cursor-pointer hover:text-white transition-colors">
+             <div class="text-center mt-10 text-gray-500 text-sm flex flex-col items-center gap-2">
                  <span class="transform rotate-90">›</span>
-                 See what makes Tatem different.
+                 See what makes NovaXp different.
              </div>
         </div>
 
 		<FeatureSection 
-			label="SPLIT INBOX"
-			title="Prioritize what's important."
-			description="Split your inbox so you can focus on what matters, when it matters. Never miss an urgent email again."
+			label="REAL-TIME LEADERBOARDS"
+			title="Drive competition."
+			description="Public leaderboards showcase top members, creating healthy competition and motivating participation across your entire community."
 		>
-			<SplitInbox />
+			<Leaderboard />
 		</FeatureSection>
 
 		<FeatureSection 
-			label="MODERN TEXT EDITOR"
-			title="Write faster."
-			description="The text editor you love in your docs, now in your email. Typing has never felt this good before."
+			label="AUTOMATIC XP TRACKING"
+			title="Reward every action."
+			description="Automatically track messages, reactions, voice activity, and more. Members earn XP for everything they do in your server."
 		>
-			<TextEditorSimple />
+			<XPTracking />
 		</FeatureSection>
 
 		<FeatureSection 
-			label="MODERN TEXT EDITOR"
-			title="Write faster."
-			description="The text editor you love in your docs, now in your email. Typing has never felt this good before."
+			label="CUSTOM CHALLENGES"
+			title="Keep members engaged."
+			description="Create daily streaks, special events, and custom challenges. Integrate with Twitter, YouTube, and other platforms for cross-platform engagement."
 		>
-			<TextEditorToolbar />
+			<Challenges />
 		</FeatureSection>
 
 		<FeatureSection 
-			label="SPEED"
-			title="Say goodbye to lag."
-			description="With <50ms interactions, Tatem delivers unmatched speed. Reach new heights with a new standard for responsiveness."
+			label="REWARDS SHOP"
+			title="Let members spend their XP."
+			description="Create a custom shop where members exchange XP for roles, perks, or exclusive rewards. Fully customizable to match your community."
 		>
-			<Speed />
-		</FeatureSection>
-
-        <!-- Duplicate Speed section as per screenshot showing multiple similar blocks or just emphasis -->
-        <FeatureSection 
-			label="SPEED"
-			title="Say goodbye to lag."
-			description="With <50ms interactions, Tatem delivers unmatched speed. Reach new heights with a new standard for responsiveness."
-		>
-			<Speed />
+			<RewardsShop />
 		</FeatureSection>
 
 		<FeatureSection 
-			label="SEAMLESS DESIGN"
-			title="Make it your own."
-			description="Light mode. Dark mode. Elegant transitions. Minimal, yet stunning. Designed to be beautiful. Designed to inspire."
+			label="ADVANCED ANALYTICS"
+			title="Track engagement trends."
+			description="Understand your community with detailed analytics. See who's active, when they're online, and what drives engagement."
 		>
-			<Design />
-		</FeatureSection>
-        
-        <!-- Duplicate Design section as per screenshot -->
-        <FeatureSection 
-			label="SEAMLESS DESIGN"
-			title="Make it your own."
-			description="Light mode. Dark mode. Elegant transitions. Minimal, yet stunning. Designed to be beautiful. Designed to inspire."
-		>
-			<Design />
-		</FeatureSection>
-        
-        <!-- Another Design section? The screenshot has 3 dots sections. -->
-         <FeatureSection 
-			label=""
-			title=""
-			description=""
-		>
-            <!-- Just the visual for the third one -->
-			<Design />
-		</FeatureSection>
-
-
-		<FeatureSection 
-			label="SHORTCUTS"
-			title="Built for your keyboard."
-			description="Fly through your inbox with rapid-fire shortcuts for every action. Don't worry, you already know our keystrokes."
-		>
-			<!-- Empty keyboard placeholder as per first keyboard screenshot -->
-            <div class="w-3/4 h-10 bg-[#1a1a1a] rounded-full"></div>
+			<Analytics />
 		</FeatureSection>
 
 		<FeatureSection 
-			label="SHORTCUTS"
-			title="Built for your keyboard."
-			description="Fly through your inbox with rapid-fire shortcuts for every action. Don't worry, you already know our keystrokes."
+			label="SLASH COMMANDS"
+			title="Simple and intuitive."
+			description="Easy-to-use Discord slash commands make it simple for members to check their XP, view leaderboards, and browse rewards."
 		>
-			<Keyboard highlight="" />
-		</FeatureSection>
-        
-        <FeatureSection 
-			label="SHORTCUTS"
-			title="Built for your keyboard."
-			description="Fly through your inbox with rapid-fire shortcuts for every action. Don't worry, you already know our keystrokes."
-		>
-			<Keyboard highlight="c" />
+			<Commands />
 		</FeatureSection>
 
 		<FeatureSection 
-			label="SECURITY"
-			title="Enterprise-grade security and privacy."
-			description="We don't store any of your emails, passwords, or payment information in our database. Ever."
+			label="VOTING CAMPAIGNS"
+			title="Run community events."
+			description="Create voting campaigns with prize pools. Automated winner selection makes running contests and giveaways effortless."
 		>
-			<Security />
+			<Analytics />
 		</FeatureSection>
-        
-        <FeatureSection 
-			label="SECURITY"
-			title="Enterprise-grade security and privacy."
-			description="We don't store any of your emails, passwords, or payment information in our database. Ever."
+
+		<FeatureSection 
+			label="ONE-CLICK SETUP"
+			title="Get started in seconds."
+			description="No complex configuration needed. Add NovaXp to your Discord server with one click and start gamifying your community immediately."
 		>
-			<Security />
+			<Commands />
 		</FeatureSection>
 	</div>
+
+	<HowItWorks />
+
+	<Testimonials />
+
+	<Pricing />
 
 	<Footer />
 </main>

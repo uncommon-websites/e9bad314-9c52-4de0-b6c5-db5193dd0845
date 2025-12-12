@@ -14,24 +14,26 @@
 	--color-gray-900: #111827;
 	--color-gray-950: #030712;
 
-    --color-tatem-bg: #050505;
-    --color-tatem-card: #0a0a0a;
-    --color-tatem-border: #1a1a1a;
-    --color-tatem-text: #888888;
-    --color-tatem-text-light: #e0e0e0;
-    --color-tatem-primary: #ffffff;
+    --color-novaxp-bg: #050505;
+    --color-novaxp-card: #0a0a0a;
+    --color-novaxp-border: #1a1a1a;
+    --color-novaxp-text: #888888;
+    --color-novaxp-text-light: #e0e0e0;
+    --color-novaxp-primary: #ffffff;
+    --color-novaxp-accent: #5865F2;
+    --color-novaxp-accent-dark: #4752C4;
 
 	--font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
-    background-color: var(--color-tatem-bg);
-    color: var(--color-tatem-text);
+    background-color: var(--color-novaxp-bg);
+    color: var(--color-novaxp-text);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--color-tatem-primary);
+    color: var(--color-novaxp-primary);
 }

@@ -4,48 +4,59 @@
 
 <section class="relative min-h-screen flex flex-col items-center pt-32 overflow-hidden bg-[#050505]">
     <!-- Gradient overlay to fade to black at bottom -->
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-[#5c7c8a] via-[#1a202c] to-[#050505] pointer-events-none opacity-80"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-[#5865F2]/20 via-[#1a202c] to-[#050505] pointer-events-none opacity-80"></div>
     
     <Navbar transparent={true} />
     
     <div class="text-center z-10 px-4 max-w-4xl mx-auto mt-10">
-        <div class="mb-6 text-white/80 text-sm font-medium tracking-wide">Now in early access.</div>
+        <div class="mb-6 text-white/80 text-sm font-medium tracking-wide">Transform your Discord community</div>
         <h1 class="text-5xl md:text-7xl font-medium text-white tracking-tight mb-8 leading-[1.1]">
-            The email experience<br />
-            you've been waiting for.
+            Turn lurkers into<br />
+            active members.
         </h1>
         
         <div class="flex items-center justify-center gap-6 mb-20">
-            <a href="#get-started" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">Get started</a>
-            <span class="text-white/70 text-sm font-medium">Fast, beautiful, simple.</span>
+            <a href="#add-bot" class="bg-[#5865F2] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#4752C4] transition-colors">Add to Discord</a>
+            <span class="text-white/70 text-sm font-medium">One-click installation.</span>
         </div>
     </div>
 
     <!-- Hero Image Placeholder / Mockup -->
     <div class="relative w-full max-w-7xl mx-auto perspective-2000 z-10">
         <div class="transform rotate-x-20 rotate-y-minus-10 rotate-z-10 scale-90 translate-y-20 origin-top">
-            <!-- Glassmorphism Card simulating the interface -->
-            <div class="bg-[#1a1a1a] rounded-xl shadow-2xl overflow-hidden border border-white/10 relative">
+            <!-- Discord-style Leaderboard Interface -->
+            <div class="bg-[#2B2D31] rounded-xl shadow-2xl overflow-hidden border border-white/10 relative">
                 <!-- Header -->
-                <div class="h-12 bg-[#1a1a1a] border-b border-white/5 flex items-center px-4 gap-4">
-                     <div class="flex gap-2">
-                        <div class="w-3 h-3 rounded-full bg-[#ff5f57]"></div>
-                        <div class="w-3 h-3 rounded-full bg-[#febc2e]"></div>
-                        <div class="w-3 h-3 rounded-full bg-[#28c840]"></div>
+                <div class="h-14 bg-[#313338] border-b border-black/20 flex items-center px-6 gap-4">
+                    <div class="text-white font-semibold text-sm flex items-center gap-2">
+                        <svg class="w-5 h-5 text-[#5865F2]" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-1-9h2v2h-2v-2zm0 4h2v2h-2v-2z"/>
+                        </svg>
+                        # leaderboard
                     </div>
                     <div class="flex-1"></div>
-                    <div class="text-xs text-gray-500">Inbox</div>
+                    <div class="text-xs text-gray-400">🏆 Top Members</div>
                 </div>
                 
-                <!-- Email List -->
-                <div class="bg-[#0f0f0f] p-0">
-                    {#each Array(12) as _, i}
-                        <div class="flex items-center gap-4 px-6 py-3 border-b border-white/5 hover:bg-white/5 group">
-                            <div class="w-4 h-4 border border-gray-700 rounded-sm group-hover:border-gray-500"></div>
-                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-gray-700 to-gray-800 flex-shrink-0"></div>
-                            <div class="w-32 h-2 bg-gray-800 rounded flex-shrink-0"></div>
-                            <div class="flex-1 h-2 bg-gray-800/50 rounded"></div>
-                            <div class="w-16 h-2 bg-gray-800/30 rounded flex-shrink-0"></div>
+                <!-- Leaderboard List -->
+                <div class="bg-[#2B2D31] p-6">
+                    {#each Array(10) as _, i}
+                        <div class="flex items-center gap-4 px-4 py-3 rounded-lg hover:bg-[#35373C] group transition-colors mb-2">
+                            <div class="w-8 text-center font-bold text-gray-500 text-sm">#{i + 1}</div>
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#5865F2] to-[#4752C4] flex-shrink-0 flex items-center justify-center text-white font-semibold text-sm">
+                                {String.fromCharCode(65 + i)}
+                            </div>
+                            <div class="flex-1">
+                                <div class="h-3 bg-[#35373C] rounded w-32 mb-1"></div>
+                                <div class="h-2 bg-[#35373C]/50 rounded w-20"></div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="text-[#5865F2] font-bold text-sm">{(1000 - i * 50).toLocaleString()}</div>
+                                <div class="text-gray-500 text-xs">XP</div>
+                            </div>
+                            <div class="w-6 h-6 rounded bg-[#5865F2]/20 flex items-center justify-center">
+                                <span class="text-[#5865F2] text-xs">⚡</span>
+                            </div>
                         </div>
                     {/each}
                 </div>
